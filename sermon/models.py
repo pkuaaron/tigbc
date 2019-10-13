@@ -1,7 +1,7 @@
 from django.db import models
 import datetime
 
-# Create your models here.
+
 class SermonSundaySchool(models.Model):
     file_type=models.CharField(max_length=50,choices=[('Sermon','Sermon'),('Sunday School','Sunday School')],default='Sermon')
     english_title=models.CharField(max_length=200,default='')
@@ -20,5 +20,6 @@ class SermonSundaySchool(models.Model):
     tradition_chinese_speaker=models.CharField(max_length=200, default='王宇輝傳道')
     simplified_chinese_speaker=models.CharField(max_length=200, default='王宇辉传道')
     # upload_dt=models.DateTimeField('Upload Time')
+
     def __str__(self):
         return ' '.join([self.sermon_dt.strftime('%m/%d/%Y'),self.english_title,'('+self.bible_verses+')'])

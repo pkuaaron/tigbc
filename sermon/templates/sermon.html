@@ -1,17 +1,17 @@
-<h2>Sunday Sermon Recording</h2>
+{% load i18n %}
+<h2>{% trans 'Sunday Sermon Recording' %}</h2>
 {% if sermon_list %}
     <ul>
     {% for sermon,sermon_title in sermon_list %}
-        <li><a href="{% url 'sermon:details' sermon.id %}">{{ sermon_title }}</a> <a href="{%url 'sermon:editor' sermon.id %}">edit</a></li>
+        <li><a href="{% url 'sermon:details' sermon.id %}">{{ sermon_title }}</a> <a href="{%url 'sermon:editor' sermon.id %}">{% trans 'edit' %}</a></li>
         <audio controls>
-        <source src="{{ sermon.mp3 }}" type="audio/mpeg">
+        <source src="/static/{{ sermon.mp3 }}" type="audio/mpeg">
     </audio>
     {% endfor %}
     </ul>
 {% else %}
-    <p>No sermons are available.</p>
+    <p>{% trans 'No sermons are available.' %}</p>
 {% endif %}
-{% load i18n %}
 
 <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
     <input name="next" type="hidden" value="{{ redirect_to }}" />
@@ -25,5 +25,5 @@
             </option>
         {% endfor %}
     </select>
-    <input type="submit" value="Go" />
+    <input type="submit" value="{% trans  'Go' %}" />
 </form>
