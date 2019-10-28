@@ -1,0 +1,115 @@
+Project,Task,Video
+Uber App For Food With Python Django And Swift,01 What Are We Building,m319a6rajs
+Uber App For Food With Python Django And Swift,02 Workflows Architecture,xt1413j23p
+Uber App For Food With Python Django And Swift,03 Python,hvwzx6orpb
+Uber App For Food With Python Django And Swift,04 Heroku,tg5orwppvo
+Uber App For Food With Python Django And Swift,05 Atom,cp7sux9o04
+Uber App For Food With Python Django And Swift,06 Postman,rinqokckhf
+Uber App For Food With Python Django And Swift,07 Xcode,wmvjr3zqez
+Uber App For Food With Python Django And Swift,08 Initialize Project,q4c2sddki0
+Uber App For Food With Python Django And Swift,09 Creating Home Page,o7oi33qwjf
+Uber App For Food With Python Django And Swift,10 Django Dashboard,ewi1ruzuee
+Uber App For Food With Python Django And Swift,11 Adding Bootstrap,vbni1acowe
+Uber App For Food With Python Django And Swift,12 Sign In Sign Out,f6nspmhqdu
+Uber App For Food With Python Django And Swift,13 Registration Page,1rnakuqjq5
+Uber App For Food With Python Django And Swift,14 Registration Form,bmxeo2l4fp
+Uber App For Food With Python Django And Swift,15 Registration Function,bjeycwnvsa
+Uber App For Food With Python Django And Swift,16 Setting Up,y39xh57df2
+Uber App For Food With Python Django And Swift,17 Configuration Of Static Resources On Heroku,fy79y67wxo
+Uber App For Food With Python Django And Swift,18 Configuration Of Database,jbhepv2jjh
+Uber App For Food With Python Django And Swift,19 Create Facebook App,bdktof27xs
+Uber App For Food With Python Django And Swift,20 Setting Up Facebook Oauth,09d9zq93kw
+Uber App For Food With Python Django And Swift,21 Authenticate With Facebook Token,77n3son7tz
+Uber App For Food With Python Django And Swift,22 Authenticate Customers Drivers,jvwyfsl6o4
+Uber App For Food With Python Django And Swift,23 General Site Structure,arzdra0099
+Uber App For Food With Python Django And Swift,24 Advanced Design For Restaurant,klcgmrgjzy
+Uber App For Food With Python Django And Swift,25 Advanced Design For Sign In Sign Up Pages,w2kvvf7q4r
+Uber App For Food With Python Django And Swift,26 Add Bootstrap To Sign In Sign Up Pages,dnjesn8kxk
+Uber App For Food With Python Django And Swift,27 Bootstrap Form,8t2okflcxx
+Uber App For Food With Python Django And Swift,28 Bootstrap For Dashboard,kzl63pt31g
+Uber App For Food With Python Django And Swift,29 Custom Style For Dashboard,siribxf8gt
+Uber App For Food With Python Django And Swift,30 Restaurant Account Page,mtdno369cu
+Uber App For Food With Python Django And Swift,31 Restaurant Add Meal Page,icgp3clnkf
+Uber App For Food With Python Django And Swift,32 Restaurant Add Meal Function,w5qf2s2b5k
+Uber App For Food With Python Django And Swift,33 Restaurant List Meals Page,jfq2jhtusf
+Uber App For Food With Python Django And Swift,34 Restaurant Edit Meals Page,p0mq6l5qx0
+Uber App For Food With Python Django And Swift,35 Improve Side Menu,e03ind048z
+Uber App For Food With Python Django And Swift,36 Order Model,niev7cev9i
+Uber App For Food With Python Django And Swift,37 Restaurant Order Page,vmhohtv4ob
+Uber App For Food With Python Django And Swift,38 Restaurant Order Status,gehga5cepx
+Uber App For Food With Python Django And Swift,39 About Restful Api And Postman,ia4ldtnqlz
+Uber App For Food With Python Django And Swift,40 Restful Api For Restaurants,057incjbzw
+Uber App For Food With Python Django And Swift,41 Fixing Logo Link,5htn5r1rlf
+Uber App For Food With Python Django And Swift,42 Api Structure,y9jbmb2vrs
+Uber App For Food With Python Django And Swift,43 Getting Meals,k8mkcsdj0m
+Uber App For Food With Python Django And Swift,44 Creating Order,e5yiy4ea1v
+Uber App For Food With Python Django And Swift,45 Order Notification,2xne752ko5
+Uber App For Food With Python Django And Swift,46 Getting The Latest Order,jb0vav07lw
+Uber App For Food With Python Django And Swift,47 Api Structure,10rmg8eoej
+Uber App For Food With Python Django And Swift,48 Getting Ready Orders,a41ztcmkyq
+Uber App For Food With Python Django And Swift,49 Picking Up An Order,zumdoda2xr
+Uber App For Food With Python Django And Swift,50 Getting The Latest Order Of Driver,rxir20pnp5
+Uber App For Food With Python Django And Swift,51 Completing An Order,ejysx8cslw
+Uber App For Food With Python Django And Swift,52 Getting Driver S Revenue,aprzgw2v8e
+Uber App For Food With Python Django And Swift,53 Updating Driver Model,opogukb1yg
+Uber App For Food With Python Django And Swift,54 Function To Update Driver S Location,ij5df1ndmp
+Uber App For Food With Python Django And Swift,55 Report For Revenue,n7gt4pg8l4
+Uber App For Food With Python Django And Swift,56 Report For Top Meals,p7hfgf1aiw
+Uber App For Food With Python Django And Swift,57 Report For Top Drivers,hrdm1e8x9w
+Uber App For Food With Python Django And Swift,58 Create Stripe Account,fh9qdslrm9
+Uber App For Food With Python Django And Swift,59 Create Payment With Stripe,zqptwef71d
+Uber App For Food With Python Django And Swift,60 Creating Your Very First Xcode Project,4dnwfucqm1
+Uber App For Food With Python Django And Swift,61 Design Login Layout,qfznysut2v
+Uber App For Food With Python Django And Swift,62 Create Side Menu Layout,myj3jjai1b
+Uber App For Food With Python Django And Swift,63 Design Restaurant List Layout,rcyu31m2d1
+Uber App For Food With Python Django And Swift,64 Create Class For Restaurant View Controller,zjarowyuuj
+Uber App For Food With Python Django And Swift,65 Design Meal List Layout,3qof7qk3az
+Uber App For Food With Python Django And Swift,66 Design Meal Details Layout,nmbg2ck7my
+Uber App For Food With Python Django And Swift,67 Design Tray Layout,0wvphlivkg
+Uber App For Food With Python Django And Swift,68 Create Class For Tray View Controller,sw9sgjib8h
+Uber App For Food With Python Django And Swift,69 Design Credit Card Layout,tyzuz8a5wb
+Uber App For Food With Python Django And Swift,70 Design Order Layout,qek1dg119x
+Uber App For Food With Python Django And Swift,71 Create Class For Order View Controller,cz2990agwr
+Uber App For Food With Python Django And Swift,72 Install Alamofire Swiftjson And Facebook Sdk,7grez6miy6
+Uber App For Food With Python Django And Swift,73 Connection To Facebook,q9hsj7pp5i
+Uber App For Food With Python Django And Swift,74 Getting Facebook User Data,nqbkm2gbpk
+Uber App For Food With Python Django And Swift,75 Logging Out From Facebook,gt6vq20huy
+Uber App For Food With Python Django And Swift,76 Create Api Manager,ogixrmfwjm
+Uber App For Food With Python Django And Swift,77 Create Login And Logout Api,a1mwgo1i5t
+Uber App For Food With Python Django And Swift,78 Testing Login And Logout Functions With Server,ezirz56pcl
+Uber App For Food With Python Django And Swift,79 Create Api To Get List Of Restaurants,88rrf977aj
+Uber App For Food With Python Django And Swift,80 Create Restaurant Model,3bugesjzm9
+Uber App For Food With Python Django And Swift,81 Create Restaurant View Cell,eubuzts4j8
+Uber App For Food With Python Django And Swift,82 Create Search Bar Function,gruwpoxzfc
+Uber App For Food With Python Django And Swift,83 Create Activity Indicator For Restaurants List,6sgkddypqa
+Uber App For Food With Python Django And Swift,84 Create Api To Get List Of Meals,bs1p5i3gza
+Uber App For Food With Python Django And Swift,85 Create Meal Model And Meal View Cell,v19lkrmlu2
+Uber App For Food With Python Django And Swift,86 Create Meal List View Controller,x2q09u1kq4
+Uber App For Food With Python Django And Swift,87 Create Activity Indicator For Meals List,7qcl815nzs
+Uber App For Food With Python Django And Swift,88 Displaying Data On Meal Details,3oxk217eii
+Uber App For Food With Python Django And Swift,89 Add Functions To Buttons,ig711dysj7
+Uber App For Food With Python Django And Swift,90 Business Logic For Tray Items,n6i0dvi659
+Uber App For Food With Python Django And Swift,91 General Logic To Display Tray View,qkm390wak0
+Uber App For Food With Python Django And Swift,92 Displaying Meals On Tray,xeuqv6xvjv
+Uber App For Food With Python Django And Swift,93 Showing Location On Map,o0v8hzo76t
+Uber App For Food With Python Django And Swift,94 Transform An Address To A Pin On Map,ss86r7s5gm
+Uber App For Food With Python Django And Swift,95 Create Api To Handle Orders And Payment,0x01qqxgkh
+Uber App For Food With Python Django And Swift,96 Add Business Logic To Payment Process,rzg84fafy7
+Uber App For Food With Python Django And Swift,97 Display Order Details On Order View,j3pobgqq5z
+Uber App For Food With Python Django And Swift,98 Showing Location Of Restaurant And Customer On Map,eg97x38g5k
+Uber App For Food With Python Django And Swift,99 Create Side Menu And Orders List Layout,wxi8j6u2xp
+Uber App For Food With Python Django And Swift,100 Add Switching Accounts Function To Login View,8h82pa7zgw
+Uber App For Food With Python Django And Swift,101 Design Ready Orders Layout,u1sdoc2d9o
+Uber App For Food With Python Django And Swift,102 Design Delivery Map Layout,m8jzlnusyu
+Uber App For Food With Python Django And Swift,103 Design Revenue Statistic Layout,9akpax9q2q
+Uber App For Food With Python Django And Swift,104 Create Api To Get List Of Ready Orders,f3nlx2q2sc
+Uber App For Food With Python Django And Swift,105 Displaying Data On Ready Orders View,nk7lslxjyu
+Uber App For Food With Python Django And Swift,106 Add Function To Pick Up An Order,byru0jbbjg
+Uber App For Food With Python Django And Swift,107 Showing Customer Details On Driver S Map,3anbjr205n
+Uber App For Food With Python Django And Swift,108 Showing Location Of Restaurant And Customer On Map,ndmk9ldqes
+Uber App For Food With Python Django And Swift,109 Update Driver S Location To Server,l90phm6w6g
+Uber App For Food With Python Django And Swift,110 Displaying Driver S Location On Customer S Map,ap2yc7ng0w
+Uber App For Food With Python Django And Swift,111 Customise Drop Pin On Map And Two Simulators,2plpousisn
+Uber App For Food With Python Django And Swift,112 Completing An Order,mh207xt59w
+Uber App For Food With Python Django And Swift,113 Install Charts And Create Api For Driver S Revenue,xqn0b5s547
+Uber App For Food With Python Django And Swift,114 Showing Chart Of Driver S Revenue,61kjhluax7

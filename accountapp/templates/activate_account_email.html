@@ -1,0 +1,4 @@
+{% autoescape off %}
+请点击下面的链接激活你的账号{{ user.username }}
+链接地址: http://{{ domain }}{% url 'accountapp:activate_account' uid=uid token=token %}
+{% endautoescape %}

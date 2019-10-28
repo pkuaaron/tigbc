@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{message}}
+  <a href="{{ request.META.HTTP_REFERER }}">返回</a>
+{% endblock%}

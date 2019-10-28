@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div>
+      <h1>{{error_message}}</h1>
+    </div>
+    <form action="" method="post">
+      {% csrf_token %}
+      <input type="text" name='username' placeholder="用户名"></input>
+      <input type="password" name='password' placeholder="密码"></input>
+      <a href="{% url 'accountapp:forget_password' %}">忘记密码</a>
+      <button name='login_btn'>登录</button>
+    </form>
+  {% endblock %}
