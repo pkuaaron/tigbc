@@ -1,35 +1,174 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>首页</title>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/tigbc.css' %}">
+  <link rel="stylesheet" href="{% static 'css/freelancer.css' %}">
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</script>
+    <title>恩道圣经教会</title>
 </head>
-<body>
-  <nav>
-    <div>
-      <ul>
-        <li><a href="">饿极了</a></li>
-        <li><a href="">我的订单</a></li>
-        <li><a href="">开店</a></li>
-      </ul>
-      <form action="" method='POST'>
-        <ul>
-          {% if user.is_authenticated %}
-            <li><a href="{% url 'accountapp:logout' %}">注销</a></li>
-            <li><a href="{% url 'accountapp:change_password' %}">修改密码</a></li>
-          {% else %}
-            <li><a href="{% url 'accountapp:login' %}">登录</a></li>
-            <li><a href="{% url 'accountapp:signup' %}">注册</a></li>
-            <li><a href="{% url 'accountapp:signup_activate' %}">注册需要激活</a></li>
-            <li><a href="{% url 'accountapp:forget_password' %}">忘记密码</a></li>
-          {% endif %}
-        </ul>
-      </form>
+
+<body data-spy="scroll" data-target="#mainNav" data-offset="50">
+    <nav class="navbar navbar-expand-lg bg-white text-dark fixed-top" id="mainNav">
+      <div class="container">
+        <img class="navbar-brand" height="110px"  src="{% static 'img/WebBanner.png' %}" alt="恩道圣经教会" ></a>
+        <button class="navbar-toggler navbar-toggler-right text-dark font-weight-bold bg-white rounded" type="button" data-toggle="collapse"
+         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          菜单
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link rounded text-dark" href="#worship">主日敬拜</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link rounded text-dark" href="#about">关于恩道</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link rounded text-dark" href="#contact">联系恩道</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link rounded text-dark" href="">信仰宣言</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link rounded text-dark" href="">恩道資源</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- picture slides -->
+    <div class="container">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" >
+          <div class="carousel-item active">
+            <img src="{%static 'img/w01.JPG' %}" alt"worship" class="d-block img-fluid">
+          </div>
+
+          <div class="carousel-item">
+            <img src="{%static 'img/w01.JPG' %}" alt="worship" class="d-block img-fluid">
+          </div>
+
+          <div class="carousel-item">
+            <img src="{%static 'img/w01.JPG' %}" alt="worship" class="d-block img-fluid">
+          </div>
+        </div>
+
+      </div>
     </div>
-  </nav>
-  {% block content %}
-  {% endblock %}
+
+    <!-- worship Section -->
+    <span class="anchor" id="worship"></span>
+    <div class="call-outs-container">
+      <div class="container">
+        <div class="row">
+            <div class="call-out">
+        	       <img  src="{%static 'img/prayer.png' %}"  width="100%">
+                 <div class="text-img-centered text-light bg-dark text-center" style="font-size: 150%">主日禱告<br>時間：主日上午09:15am</div>
+            </div>
+            <div class="call-out">
+                 <img  src="{%static 'img/worship.png' %}" width="100%">
+                 <div class="text-img-centered text-light bg-dark text-center" style="font-size: 150%">主日崇拜<br>時間：主日上午10:00am</div>
+            </div>
+            <div class="call-out">
+                 <img src="{%static 'img/bible_study.png' %}"  width="100%">
+                 <div class="text-img-centered text-light bg-dark text-center" style="font-size: 150%">主日學校<br>時間：主日上午11:30am</div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- About Section -->
+    <span class="anchor" id="about"></span>
+    <div class="container-fluid">
+      <div class='container about-section'>
+        <div class="row">
+          <h1 class="text-center text-secondary mb-3">關於恩道</h1>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;恩道聖經教會之名出於約翰福音一章十四節，“道成了肉身，住在我們中間，充充滿滿的有恩典有真理。”以及一章十七節，“恩典和真理都是由耶穌基督來的。”耶穌說過，“我來了，是要叫人得生命，並且得的更豐盛（約翰福音10:10）。” 這豐盛恩典的生命之道，及籍著聖經真理教導引領我們人生方向，又有恩典的聖靈在我們心中賜下更新力量，幫助我們活出超越自我的豐盛生命。
+    恩道教會的成立就是依靠神恩典真理的應許，憑著我們對神單純的信心，仰賴神豐盛的慈愛憐憫，跟隨神一步步清晰的帶領，順服神的旨意以回應神對我們的呼召，在 South Charlotte 的 Ballantyne 地區興起一個合神心意的教會。
+    恩道教會註重神話語之教導對我們生命的塑造，期盼以耶穌基督在我們生命中的自然流露作為我們彼此服事的目標和動力；勸人與神和好，以生命影響生命，恢復以神為中心，以聖經教導為原則，恩愛和諧的人際關系，以彰顯神在恩道教會每一個人身上，每一個家庭中，和每一個社區里的榮耀。</p>
+        </div>
+      </div>
+    </div>
+    <!-- Contact Section -->
+    <span class="anchor" id="contact"></span>
+    <div class="container">
+        <!-- Contact Section Heading -->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">聯繫我</h2>
+        <!-- Contact Section Form -->
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+            <form name="sentMessage" id="contactForm">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label>Name</label>
+                  <input class="form-control" id="name" type="text" placeholder="姓名">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label>Email Address</label>
+                  <input class="form-control" id="email" type="email" placeholder="電子郵箱">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label>Phone Number</label>
+                  <input class="form-control" id="phone" type="tel" placeholder="電話號碼">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label>Message</label>
+                  <textarea class="form-control" id="message" rows="5" placeholder="信息"></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">發送</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
 </body>
+    <!-- Footer -->
+  <footer class="page-footer font-small indigo">
+
+  </footer>
+
+  <!-- Copyright Section -->
+  <div class="copyright py-4 text-center">
+    <div class="container">
+      <small>Copyright &copy; 恩道圣经教会 2020</small>
+    </div>
+    <!-- Footer Location -->
+      <div class="container">
+      <p class="lead mb-0">9829 Providence Road West
+        <br>Charlotte, NC 28277</p>
+    </div>
+  </div>
+
 </html>
