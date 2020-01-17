@@ -1,0 +1,62 @@
+{% load i18n %}
+
+<form name="sentMessage" id='contactForm' name="contactForm">
+
+  <div class="control-group">
+    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+      <!-- <label>Name</label> -->
+      <input class="form-control" id="name" name='name' type="text" placeholder="{%trans '姓名' %}"  required="required" data-validation-required-message="{%trans '请输入您的姓名！'%}">
+      <p class="help-block text-danger"></p>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+      <!-- <label>Email Address</label> -->
+      <input class="form-control" id="email" name='email' type="email" placeholder="{%trans '电子邮箱' %}" required="required" data-validation-required-message="{%trans '请输入您的电子邮箱！'%}">
+      <p class="help-block text-danger"></p>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="form-group floating-label-form-group controls">
+      <!-- <label>Phone Number</label> -->
+      <input class="form-control" id="phone" name='phone' type="tel" placeholder="{%trans '电话号码'%}"  required="required" data-validation-required-message="{%trans '请输入您的电话号码！'%}">
+      <p class="help-block text-danger"></p>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+      <!-- <label>Message</label> -->
+      <textarea class="form-control" id="message" name='message' rows="5" placeholder="{%trans '信息'%}"></textarea>
+      <p class="help-block text-danger"></p>
+    </div>
+  </div>
+  <br>
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="button-wrapper">
+        <button type="submit" class="btn btn-outline-info btn-lg" id="sendMessageButton">{%trans "发送" %}</button>
+      </div>
+    </div>
+  </div>
+
+</form>
+<script>
+  $('#contactForm').on('submit', function(e){
+    e.preventDefault();
+  // alert('Message sent');
+//清空市和区
+$.ajax({
+    url:'{% url "accountapp:sentMessage" %}',
+    type:'get',
+
+    data:{"name":$("#name").val(),
+        "email":$("#email").val(),
+        "phone":$("#phone").val(),
+        "message":$("#message").val()}
+}).done(function(data){
+    alert("{%trans '信息已经发送！' %}");
+    }
+  );
+});
+
+</script>

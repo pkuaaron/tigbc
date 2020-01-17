@@ -17,22 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: sermon/templates/sermon.html:2
-msgid "Sunday Sermon Recording"
+#: tigbc/settings.py:57
+msgid "Simplified Chinese"
 msgstr ""
 
-#: sermon/templates/sermon.html:6
-msgid "edit"
-msgstr ""
-
-#: sermon/templates/sermon.html:13
-msgid "No sermons are available."
-msgstr ""
-
-#: sermon/templates/sermon.html:28
-msgid "Go"
-msgstr ""
-
-#: sermon/views.py:37 sermon/views.py:47
-msgid "Sermon does not exist"
+#: tigbc/settings.py:58
+msgid "Traditiaonal Chinese"
 msgstr ""
