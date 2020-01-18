@@ -23,6 +23,10 @@ def home(request):
     return render(request, "home.html", {'about': '/'.join([lang, "about.txt"])})
 
 
+def calendar(request):
+    return render(request, "calendar.html")
+
+
 def sentMessage(request):
     subject = '[TIGBC]Email from visitor %s' % request.GET['name']
     message = '\n'.join(['Name:'+request.GET['name'], 'Email: '+request.GET['email'], 'Phone:'+request.GET['phone'], 'Message:'+request.GET['message']])

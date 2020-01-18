@@ -7,6 +7,7 @@ app_name = 'accountapp'
 urlpatterns = [
     path('', views.home, name='home'),
     path('faith', views.faith, name='faith'),
+    path('calendar', views.calendar, name='calendar'),
     path('signup', views.signup, name='signup'),
     path('signup_activate', views.signup_activate, name='signup_activate'),
     path('login', views.login, name='login'),

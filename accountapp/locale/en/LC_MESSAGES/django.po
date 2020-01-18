@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-16 22:35-0500\n"
+"POT-Creation-Date: 2020-01-18 09:19-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,62 +17,82 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: accountapp/templates/base.html:15 accountapp/templates/base.html:27
-#: accountapp/templates/base.html:63
+#: accountapp/templates/base.html:15 accountapp/templates/base.html:23
+#: accountapp/templates/base.html:81
 msgid "恩道圣经教会"
 msgstr "Grace in Truth Bible Church"
 
-#: accountapp/templates/base.html:35
+#: accountapp/templates/base.html:47 accountapp/templates/home.html:44
 msgid "主日崇拜"
 msgstr "Worship"
 
-#: accountapp/templates/base.html:38 accountapp/templates/home.html:57
+#: accountapp/templates/base.html:50 accountapp/templates/home.html:57
 msgid "关于恩道"
 msgstr "About"
 
-#: accountapp/templates/base.html:41
+#: accountapp/templates/base.html:53
 msgid "联系我们"
 msgstr "Contact"
 
-#: accountapp/templates/base.html:44
+#: accountapp/templates/base.html:56
+msgid "恩道事工"
+msgstr "Ministry"
+
+#: accountapp/templates/base.html:59
+msgid "恩道日历"
+msgstr "Calendar"
+
+#: accountapp/templates/base.html:62
 msgid "信仰宣言"
 msgstr "Faith"
 
-#: accountapp/templates/base.html:47
+#: accountapp/templates/base.html:65
 msgid "恩道资源"
 msgstr "Resource"
 
-#: accountapp/templates/contact_me.html:7
+#: accountapp/templates/contact_me.html:8
 msgid "姓名"
 msgstr "Name"
 
-#: accountapp/templates/contact_me.html:14
+#: accountapp/templates/contact_me.html:8
+msgid "请输入您的姓名！"
+msgstr "Please enter your name"
+
+#: accountapp/templates/contact_me.html:15
 msgid "电子邮箱"
 msgstr "Email"
 
-#: accountapp/templates/contact_me.html:21
+#: accountapp/templates/contact_me.html:15
+msgid "请输入您的电子邮箱！"
+msgstr "Please enter your email"
+
+#: accountapp/templates/contact_me.html:22
 msgid "电话号码"
 msgstr "Phone"
 
-#: accountapp/templates/contact_me.html:28
+#: accountapp/templates/contact_me.html:22
+msgid "请输入您的电话号码！"
+msgstr "Please enter your phone"
+
+#: accountapp/templates/contact_me.html:29
 msgid "信息"
 msgstr "Message"
 
-#: accountapp/templates/contact_me.html:36
+#: accountapp/templates/contact_me.html:37
 msgid "发送"
 msgstr "Send"
 
-#: accountapp/templates/home.html:40
-msgid "主日祷告<br>09:15am"
-msgstr "Sunday Prayer<br>09:15am"
+#: accountapp/templates/contact_me.html:57
+msgid "信息已经发送！"
+msgstr "Message has been sent"
 
-#: accountapp/templates/home.html:44
-msgid "主日崇拜<br>10:00am"
-msgstr "Sunday Worship<br>10:00am"
+#: accountapp/templates/home.html:40
+msgid "主日祷告"
+msgstr "Sunday Prayer"
 
 #: accountapp/templates/home.html:48
-msgid "主日学校<br>11:30am"
-msgstr "Sunday School<br>11:30am"
+msgid "主日学校"
+msgstr "Sunday School"
 
 #: accountapp/templates/home.html:76
 msgid "王宇晖传道"
