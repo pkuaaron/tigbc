@@ -21,8 +21,10 @@ def view_sermon_list(request):
         else:
             title = ' '.join([s.sermon_dt.strftime('%m/%d/%Y'), s.english_title, '('+s.bible_verses+')', lang])
         sermon_title_list.append(title)
+    # import pdb
+    # pdb.set_trace()
     context = {'sermon_list': zip(latest_sermons, sermon_title_list)}
-    return HttpResponse(template.render(context, request))
+    return render(request, 'sermon.html', context)
 
 
 def upload_sermon(request):

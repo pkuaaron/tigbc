@@ -1,15 +1,21 @@
 {% extends 'base.html' %}
 {% load i18n %}
-<h2>{% trans 'Sunday Sermon Recording' %}</h2>
-{% if sermon_list %}
-    <ul>
-    {% for sermon,sermon_title in sermon_list %}
-        <li><a href="{% url 'sermon:details' sermon.id %}">{{ sermon_title }}</a> <a href="{%url 'sermon:editor' sermon.id %}">{% trans 'edit' %}</a></li>
-        <audio controls>
-        <source src="/static/{{ sermon.mp3 }}" type="audio/mpeg">
-    </audio>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>{% trans 'No sermons are available.' %}</p>
-{% endif %}
+{% block content %}
+<div class="container">
+<h2>{% trans '主日敬拜录音' %}</h2>
+  {% if sermon_list %}
+      <ul>
+      {% for sermon,sermon_title in sermon_list %}
+          <li><a href="{% url 'sermonapp:details' sermon.id %}">{{ sermon_title }}</a>
+            <a href="{%url 'sermonapp:editor' sermon.id %}">{% trans 'edit' %}</a>
+          <audio controls>
+          <source src="/static/worship/{{ sermon.mp3 }}" type="audio/mpeg">
+          </audio>
+        </li>
+      {% endfor %}
+      </ul>
+  {% else %}
+      <p>{% trans 'No sermons are available.' %}</p>
+  {% endif %}
+</div>
+{% endblock %}
