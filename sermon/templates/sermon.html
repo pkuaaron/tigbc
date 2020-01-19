@@ -7,7 +7,7 @@
       <ul>
       {% for sermon,sermon_title in sermon_list %}
           <li><a href="{% url 'sermonapp:details' sermon.id %}">{{ sermon_title }}</a>
-            <a href="{%url 'sermonapp:editor' sermon.id %}">{% trans 'edit' %}</a>
+            <!-- <a href="{%url 'sermonapp:editor' sermon.id %}">{% trans 'edit' %}</a> -->
           <audio controls>
           <source src="/static/worship/{{ sermon.mp3 }}" type="audio/mpeg">
           </audio>
@@ -15,7 +15,24 @@
       {% endfor %}
       </ul>
   {% else %}
-      <p>{% trans 'No sermons are available.' %}</p>
+      <p>{% trans '没有主日敬拜录音' %}</p>
+  {% endif %}
+</div>
+<div class="container">
+<h2>{% trans '主日学录音' %}</h2>
+  {% if sundayschool_list %}
+      <ul>
+      {% for sermon,sermon_title in sundayschool_list %}
+          <li><a href="{% url 'sermonapp:details' sermon.id %}">{{ sermon_title }}</a>
+            <!-- <a href="{%url 'sermonapp:editor' sermon.id %}">{% trans 'edit' %}</a> -->
+          <audio controls >
+            <source src="/static/worship/{{ sermon.mp3 }}" type="audio/mpeg">
+          </audio>
+        </li>
+      {% endfor %}
+      </ul>
+  {% else %}
+      <p>{% trans '没有主日学录音' %}</p>
   {% endif %}
 </div>
 {% endblock %}
