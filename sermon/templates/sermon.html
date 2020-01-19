@@ -35,4 +35,41 @@
       <p>{% trans '没有主日学录音' %}</p>
   {% endif %}
 </div>
+
+
+<div class="container">
+<h2>{% trans '每日读经计划' %}</h2>
+<h3>{% trans '按照章节顺序' %}</h3>
+  {% if biblereading_plan %}
+      <table class='display' id='plan_table'>
+      {% for html in biblereading_plan %}
+            {% autoescape off %}
+                {{ html }}
+            {% endautoescape %}
+      {% endfor %}
+      </table>
+  {% else %}
+      <p>{% trans '没有读经计划' %}</p>
+  {% endif %}
+</div>
+
+<div class="container">
+<h3>{% trans '按照时间顺序' %}</h3>
+  {% if biblereading_plan2 %}
+      <table class='display' id='plan_table'>
+      {% for html in biblereading_plan2 %}
+            {% autoescape off %}
+                {{ html }}
+            {% endautoescape %}
+      {% endfor %}
+      </table>
+  {% else %}
+      <p>{% trans '没有读经计划' %}</p>
+  {% endif %}
+</div>
+<script>
+$(document).ready( function () {
+$('#plan_table').DataTable();
+  } );
+</script>
 {% endblock %}
