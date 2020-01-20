@@ -65,8 +65,8 @@ LANGUAGES = (
     ('zh-hant', _('Traditiaonal Chinese')),
 )
 ROOT_URLCONF = 'tigbc.urls'
-MEDIA_ROOT = BASE_DIR
-MEDIA_URL = '/'
+# MEDIA_ROOT = BASE_DIR
+# MEDIA_URL = '/'
 
 TEMPLATES = [
     {
