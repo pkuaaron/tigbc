@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '%a*g#yk*sz6to%+9p=@!vi444ei3y6d@w)_^_4n8#a8z*ta@sy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['heroku.com', '127.0.0.1', 'tigbc.heroku.com', 'tigbc.herokuapp.com']
 
@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    # 'tigbc.disable_cookie_lang.ForceDefaultLanguageMiddleware',
+    'tigbc.disable_cookie_lang.ForceDefaultLanguageMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',

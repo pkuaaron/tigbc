@@ -1,1 +1,1 @@
-web: gunicorn ejile.wsgi
+web: gunicorn tigbc.wsgi
