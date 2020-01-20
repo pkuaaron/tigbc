@@ -45,6 +45,10 @@ def faith(request):
         return render(request, '/'.join(["zh-hant", "faith.html"]))
 
 
+def children_ministry(request):
+    return render(request, "children_ministry.html")
+
+
 def signup(request):
     # 不需要激活的注册
     form = SignupForm()

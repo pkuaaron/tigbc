@@ -2,11 +2,14 @@
 {% load i18n %}
 {% block content %}
 <div class="container">
-<h2>{% trans '主日敬拜录音' %}</h2>
+<h2 class='text-center'>{% trans '主日敬拜录音' %}</h2>
   {% if sermon_list %}
       <ul>
       {% for sermon,sermon_title in sermon_list %}
-          <li><a href="{% url 'sermonapp:details' sermon.id %}">{{ sermon_title }}</a>
+          <li>
+            <!-- <a href="{% url 'sermonapp:details' sermon.id %}"> -->
+            {{ sermon_title }}
+          <!-- </a> -->
             <!-- <a href="{%url 'sermonapp:editor' sermon.id %}">{% trans 'edit' %}</a> -->
           <audio controls>
           <source src="/static/worship/{{ sermon.mp3 }}" type="audio/mpeg">
@@ -19,12 +22,11 @@
   {% endif %}
 </div>
 <div class="container">
-<h2>{% trans '主日学录音' %}</h2>
+<h2 class='text-center'>{% trans '主日学录音' %}</h2>
   {% if sundayschool_list %}
       <ul>
-      {% for sermon,sermon_title in sundayschool_list %}
-          <li><a href="{% url 'sermonapp:details' sermon.id %}">{{ sermon_title }}</a>
-            <!-- <a href="{%url 'sermonapp:editor' sermon.id %}">{% trans 'edit' %}</a> -->
+      {% for sermon, sermon_title in sundayschool_list %}
+          <li>{{ sermon_title }}
           <audio controls >
             <source src="/static/worship/{{ sermon.mp3 }}" type="audio/mpeg">
           </audio>
@@ -37,8 +39,8 @@
 </div>
 
 
+<h2 class='text-center'>{% trans '每日读经计划' %}</h2>
 <div class="container">
-<h2>{% trans '每日读经计划' %}</h2>
 <h3>{% trans '按照章节顺序' %}</h3>
   {% if biblereading_plan %}
       <table class='display' id='plan_table'>
@@ -56,7 +58,7 @@
 <div class="container">
 <h3>{% trans '按照时间顺序' %}</h3>
   {% if biblereading_plan2 %}
-      <table class='display' id='plan_table'>
+      <table class='display' id='plan_table1'>
       {% for html in biblereading_plan2 %}
             {% autoescape off %}
                 {{ html }}
@@ -70,6 +72,7 @@
 <script>
 $(document).ready( function () {
 $('#plan_table').DataTable();
+$('#plan_table1').DataTable();
   } );
 </script>
 {% endblock %}

@@ -5,6 +5,8 @@ from sermon.models import SermonSundaySchool, DailyBible
 from sermon.forms import SermonForm
 from django.utils import translation
 from django.utils.translation import gettext as _
+from dateutil import relativedelta
+import datetime
 # Create your views here.
 
 
@@ -22,29 +24,33 @@ def get_title(s):
 def view_sermon_list(request):
     latest_sermons = SermonSundaySchool.objects.filter(file_type='Sermon').order_by('-sermon_dt')[:5]
     latest_sundayschool = SermonSundaySchool.objects.filter(file_type='Sunday School').order_by('-sermon_dt')[:5]
-
+    today = datetime.datetime.now()
+    start = today - datetime.timedelta((today.weekday() + 1) % 7)
+    sat = start + relativedelta.relativedelta(weekday=relativedelta.SA(-1))
+    sunday = sat + relativedelta.relativedelta(weekday=relativedelta.SU(-1))
     lang = translation.get_language()
+    days_of_bible = 8
     if lang == 'zh-hans':
-        biblereading_plan = DailyBible.objects.filter(language='SimpleChinese', plan_name='Chapter').order_by('date')[:7]
-        biblereading_plan2 = DailyBible.objects.filter(language='SimpleChinese', plan_name='Chronology').order_by('date')[:7]
+        biblereading_plan = DailyBible.objects.filter(language='SimpleChinese', plan_name='Chapter', date__gte=sunday).order_by('date')[:days_of_bible]
+        biblereading_plan2 = DailyBible.objects.filter(language='SimpleChinese', plan_name='Chronology', date__gte=sunday).order_by('date')[:days_of_bible]
 
     elif lang == 'zh-hant':
-        biblereading_plan = DailyBible.objects.filter(language='TraditionChinese', plan_name='Chapter').order_by('date')[:7]
-        biblereading_plan2 = DailyBible.objects.filter(language='TraditionChinese', plan_name='Chronology').order_by('date')[:7]
+        biblereading_plan = DailyBible.objects.filter(language='TraditionChinese', plan_name='Chapter', date__gte=sunday).order_by('date')[:days_of_bible]
+        biblereading_plan2 = DailyBible.objects.filter(language='TraditionChinese', plan_name='Chronology', date__gte=sunday).order_by('date')[:days_of_bible]
 
     else:
-        biblereading_plan = DailyBible.objects.filter(language='English', plan_name='Chapter').order_by('date')[:7]
-        biblereading_plan2 = DailyBible.objects.filter(language='English', plan_name='Chronology').order_by('date')[:7]
+        biblereading_plan = DailyBible.objects.filter(language='English', plan_name='Chapter', date__gte=sunday).order_by('date')[:days_of_bible]
+        biblereading_plan2 = DailyBible.objects.filter(language='English', plan_name='Chronology', date__gte=sunday).order_by('date')[:days_of_bible]
     sermon_title_list = []
     for s in latest_sermons:
         sermon_title_list.append(get_title(s))
     ss_title_list = []
     for s in latest_sundayschool:
-        ss_title_list.append(get_title(s))
+        ss_title_list.append(s.sermon_dt.strftime('%d/%m/%Y ')+_('主日学校'))
     # import pdb
     # pdb.set_trace()
     context = {'sermon_list': [[x, y] for x, y in zip(latest_sermons, sermon_title_list)],
-               'sundayschool_list': [[x, y] for x, y in zip(ss_title_list, latest_sundayschool)],
+               'sundayschool_list': [[x, y] for x, y in zip(latest_sundayschool, ss_title_list)],
                'biblereading_plan': biblereading_plan, 'biblereading_plan2': biblereading_plan2}
     return render(request, 'sermon.html', context)
 
@@ -93,4 +99,3 @@ def load_bible_reading_plan():
                                            weekday=d1['Weekday'], html=d1['link'], book=d1['Book'])
 
             db.save()
- # action="{% url 'sermon:details' sermon.id %}"

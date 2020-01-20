@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static%}
+{% load i18n %}
+
+{% block content %}
+<div class="container">
+  <h1 class="text-center">{%trans '儿童事工'%}</h1>
+  <img class="img-fluid" src="{% static '/img/children_ministry.png' %}"></img>
+</div>
+
+<div class="container">
+      <div>
+        <div class="col-md-12 text-center">
+          <br>
+          <p align="justify">Truth in Grace Bible Church Children’s Ministry seeks to help kids grow a life-long faith in Jesus Christ.
+            We seek to provide a gospel centered foundation that teaches children about God and his love and purpose for them.
+            Our goal is to support families as they carry out the primary important role of shepherding their children as they grow in their faith.  We do so by:</p>
+          <ul class="list-group list-unstyled">
+            <li class="list-group-item"> Providing and encouraging faith practices that grow and enhance a daily walk with Christ.<li>
+            <li class="list-group-item"> Offering opportunities where families can explore, practice and expand a faith filled life together.</li>
+          </ul>
+          <p class="mb-0" align="justify">It is our desire that children experience the gospel of Christ from the time they enter our ministry,
+            whether through the loving care of our staff and volunteers,
+            the message of gospel-centered teaching, or the community and worship with other children</p>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+</div>
+<br>
+<div class="container">
+      <!--Grid row-->
+<div class="parallax-container" data-parallax="scroll" data-bleed="10" data-speed="0.2"
+  data-image-src="{%static 'img/children_ministry2.jpg'%}"
+  data-natural-width="2880" data-natural-height="1920" style="height: 200px;"></div>
+</div>
+<br>
+
+
+<div class="container">
+  <h1 class='text-center'>Sunday Mornings</h1>
+      <p>10:30-11:15am Sunday woship for all kids</p>
+
+      <div class="call-outs-container">
+        <div class="container">
+          <div class="row">
+              <div class="call-out">
+                   <div class="text-img-centered" style="font-size: 150%">
+                     <p><strong>Nursery Care (birth – 2)</strong></p>
+                     <p>Our Nursery serves our little ones from birth-2 years at both worship services. Staffed by loving, caring volunteers on Sunday mornings, the nursery is a warm nurturing place where a newborn or toddler can experience God’s love. Nursery care is also provided by paid, trained caregivers for a variety of classes and events that happen mid-week.</p>
+                   </div>
+              </div>
+              <div class="call-out">
+                   <div class="text-img-centered" style="font-size: 150%">
+                     <p><strong>Preschool (3-5)</strong></p>
+                     <p>This class has the needs of the younger child in mind, specifically their desire to move, create, explore, and think. &nbsp;God’s word is shared in developmentally appropriate ways – using games, Bible stories, hands-on activities, and free play to enhance learning and help children understand God’s love for them, and His call for them to love others.</p>
+
+                   </div>
+              </div>
+              <div class="call-out">
+                   <div class="text-img-centered" style="font-size: 150%">
+                     <p><strong>Elementary (K-5th)</strong></p>
+                     <p>Through small group and whole group learning experiences, kids experience learning about God’s Word, and how it applies to their everyday lives.&nbsp; 252 BASICS curriculum and resources ENCOURAGE DISCOVERY, inviting kids to live out their new understanding of how to grow in relationship with God and with others.</p>
+
+                   </div>
+              </div>
+          </div>
+        </div>
+      </div>
+  <h1 class="text-center">{%trans '青少年事工'%}</h1>
+  <img class="img-fluid" src="{% static '/img/children_ministry.png' %}"></img>
+</div>
+{% endblock %}

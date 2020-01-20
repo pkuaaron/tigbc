@@ -12,6 +12,7 @@
   <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
   <script src="{% static 'js/popper.min.js' %}"></script>
   <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/parallax.min.js' %}"></script>
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
 </script>
     <title>{%trans "恩道圣经教会" %} </title>
@@ -35,7 +36,7 @@
                     <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
                         {{ language.name_local }})
                     </option>
-                {% endfor %}
+                {% endfor %}'/'.join(["zh-hant",
             </select>
         </form>
       </div>
@@ -55,7 +56,7 @@
             <a class="nav-link" href="{% url 'accountapp:home' %}#contact">{% trans '联系我们' %}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'accountapp:faith' %}">{% trans '恩道事工' %}</a>
+            <a class="nav-link" href="{% url 'accountapp:children_ministry' %}">{% trans '恩道事工' %}</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'accountapp:calendar' %}">{% trans '恩道日历' %}</a>
