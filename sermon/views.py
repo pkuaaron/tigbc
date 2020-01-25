@@ -24,10 +24,9 @@ def get_title(s):
 def view_sermon_list(request):
     latest_sermons = SermonSundaySchool.objects.filter(file_type='Sermon').order_by('-sermon_dt')[:5]
     latest_sundayschool = SermonSundaySchool.objects.filter(file_type='Sunday School').order_by('-sermon_dt')[:5]
-    today = datetime.datetime.now()
-    start = today - datetime.timedelta((today.weekday() + 1) % 7)
-    sat = start + relativedelta.relativedelta(weekday=relativedelta.SA(-1))
-    sunday = sat + relativedelta.relativedelta(weekday=relativedelta.SU(-1))
+    today = datetime.date.today()
+    idx = (today.weekday() + 1) % 7
+    sunday = today - datetime.timedelta(idx)
     lang = translation.get_language()
     days_of_bible = 8
     if lang == 'zh-hans':

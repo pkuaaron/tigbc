@@ -4,19 +4,23 @@
 <div class="container">
 <h2 class='text-center'>{% trans '主日敬拜录音' %}</h2>
   {% if sermon_list %}
-      <ul>
+      <div class="container">
       {% for sermon,sermon_title in sermon_list %}
-          <li>
+          <div class="row d-flex flex-column">
             <!-- <a href="{% url 'sermonapp:details' sermon.id %}"> -->
+            <div class="col-md-12">
             {{ sermon_title }}
+            </div>
           <!-- </a> -->
             <!-- <a href="{%url 'sermonapp:editor' sermon.id %}">{% trans 'edit' %}</a> -->
-          <audio controls>
-          <source src="/static/worship/{{ sermon.mp3 }}" type="audio/mpeg">
-          </audio>
-        </li>
+            <div class="col-md-12">
+              <audio class="embed-responsive-item" controls="" preload="none"  style='width:600px'>
+                <source src="/static/worship/{{ sermon.mp3 }}" type="audio/mp3">
+              </audio>
+          </div>
+        </div>
       {% endfor %}
-      </ul>
+      </div>
   {% else %}
       <p>{% trans '没有主日敬拜录音' %}</p>
   {% endif %}
@@ -24,15 +28,24 @@
 <div class="container">
 <h2 class='text-center'>{% trans '主日学录音' %}</h2>
   {% if sundayschool_list %}
-      <ul>
+      <div class='container'>
       {% for sermon, sermon_title in sundayschool_list %}
-          <li>{{ sermon_title }}
-          <audio controls >
-            <source src="/static/worship/{{ sermon.mp3 }}" type="audio/mpeg">
-          </audio>
-        </li>
+
+        <div class="row">
+          <!-- <a href="{% url 'sermonapp:details' sermon.id %}"> -->
+          <div class="col-md-12">
+          {{ sermon_title }}
+          </div>
+        <!-- </a> -->
+          <!-- <a href="{%url 'sermonapp:editor' sermon.id %}">{% trans 'edit' %}</a> -->
+          <div class="col-md-12">
+            <audio class="embed-responsive-item" controls="" preload="none" style='width:600px'>
+              <source src="/static/worship/{{ sermon.mp3 }}" type="audio/mp3">
+            </audio>
+        </div>
+      </div>
       {% endfor %}
-      </ul>
+      </div>
   {% else %}
       <p>{% trans '没有主日学录音' %}</p>
   {% endif %}
