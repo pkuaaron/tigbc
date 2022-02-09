@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+{% load static%}
+{% load i18n %}
+
+{% block content %}
+{% get_current_language as LANGUAGE_CODE %}
+<div class="container">
+
+<span class="anchor" id="fridayfellowship"></span>
+  <h1 class="text-center">{%trans '周五团契'%}</h1>
+
+    <div>
+      <div class="col-md-12 text-center">
+          {%if LANGUAGE_CODE == "en" %}
+          TIGBC Fellowship
+          <br>
+          <p>Friday 19：30～20：30</p>
+          {% elif LANGUAGE_CODE == "zh-hans" %}
+          恩道圣经教会周五团契
+          <br>
+          <p>周五 19：30～20：30</p>
+          {%else%}
+          恩道聖經教會週五團契
+          <br>
+          <p>週五 19：30～20：30</p>
+          {%endif%}
+      </div>
+      <!--Grid column-->
+    </div>
+
+<span class="anchor" id="brothers"></span>
+  <h1 class="text-center">{%trans '弟兄会'%}</h1>
+
+    <div>
+      <div class="col-md-12 text-center">
+          {%if LANGUAGE_CODE == "en" %}
+          TIGBC Brother Prayer meeting
+          <br>
+          <p>Wednesday 19：15～20：15</p>
+          {% elif LANGUAGE_CODE == "zh-hans" %}
+          恩道圣经教会弟兄祷告会
+          <br>
+          <p>周三 19：15～20：15</p>
+          {%else%}
+          恩道聖經教會弟兄禱告會
+          <br>
+          <p>週三 19：15～20：15</p>
+          {%endif%}
+      </div>
+      <!--Grid column-->
+    </div>
+
+<span class="anchor" id="sisters"></span>
+  <h1 class="text-center">{%trans '姐妹会'%}</h1>
+
+    <div>
+      <div class="col-md-12 text-center">
+          {%if LANGUAGE_CODE == "en" %}
+          TIGBC Sisters Prayer meeting
+          <br>
+          <p>Wednesday 20：30～21：30</p>
+          {% elif LANGUAGE_CODE == "zh-hans" %}
+          恩道圣经教会姐妹祷告会
+          <br>
+          <p>周三 20：30～21：30</p>
+          {%else%}
+          恩道聖經教會姐妹禱告會
+          <br>
+          <p>週三 20：30～21：30</p>
+          {%endif%}
+      </div>
+      <!--Grid column-->
+    </div>
+<span class="anchor" id="evergreen"></span>
+  <h1 class="text-center">{%trans '老年事工'%}</h1>
+    <div>
+      <div class="col-md-12 text-center">
+          {%if LANGUAGE_CODE == "en" %}
+          TIGBC Evergreen Ministry：
+          <br>
+          <p>First Tuesday of Every Month 10：00～11：30 Fellowship</p>
+          {% elif LANGUAGE_CODE == "zh-hans" %}
+          恩道圣经教会老年事工：
+          <br>
+          <p>每月第一个周二 10：00～11：30 团契</p>
+          {%else%}
+          恩道聖經教會老年事工
+          <br>
+          <p>每月第一個週二 10：00～11：30 團契</p>
+          {%endif%}
+      </div>
+      <!--Grid column-->
+    </div>
+</div>
+
+<div class="container">
+
+<span class="anchor" id="youth"></span>
+  <h1 class="text-center">{%trans '青少年事工'%}</h1>
+  <img class="img-fluid" src="{% static '/img/youth.png' %}"></img>
+
+    <div>
+      <div class="col-md-12 text-center">
+          {%if LANGUAGE_CODE == "en" %}
+          TIGBC Youth Ministry：
+          <br>
+          <p>Every Friday 19：30～20：30 Fellowship</p>
+          <p>Every Sunday 10：00～12：30 Sunday Worship and Sunday School</p>
+          {% elif LANGUAGE_CODE == "zh-hans" %}
+          恩道圣经教会青少年事工：
+          <br>
+          <p>每周五19：30～20：30 团契</p>
+          <p>每周日10：00～12：30 主日敬拜和主日學</p>
+          {%else%}
+          恩道聖經教會青少年事工
+          <br>
+          <p>每週五19：30～20：30 團契</p>
+          <p>每週日10：00～12：30 主日敬拜和主日學</p>
+          {%endif%}
+      </div>
+      <!--Grid column-->
+    </div>
+</div>
+
+<span class="anchor" id="children"></span>
+
+<div class="container">
+  <h1 class="text-center">{%trans '儿童事工'%}</h1>
+  <img class="img-fluid" src="{% static '/img/children_ministry.png' %}"></img>
+</div>
+
+<div class="container">
+      <div>
+        <div class="col-md-12 text-center">
+            {%if LANGUAGE_CODE == "en" %}
+            TIGBC Children Ministry：
+            <br>
+            <p>Every Friday 19：20～20：30 AWANA</p>
+            <p>Every Sunday 10：00～12：30 Sunday Worship and Sunday School</p>
+          <!--<p align="justify">Truth in Grace Bible Church Children’s Ministry seeks to help kids grow a life-long faith in Jesus Christ.
+            We seek to provide a gospel centered foundation that teaches children about God and his love and purpose for them.
+            Our goal is to support families as they carry out the primary important role of shepherding their children as they grow in their faith.  We do so by:</p>
+          <ul class="list-group list-unstyled">
+            <li class="list-group-item"> Providing and encouraging faith practices that grow and enhance a daily walk with Christ.<li>
+            <li class="list-group-item"> Offering opportunities where families can explore, practice and expand a faith filled life together.</li>
+          </ul>
+          <p class="mb-0" align="justify">It is our desire that children experience the gospel of Christ from the time they enter our ministry,
+            whether through the loving care of our staff and volunteers,
+            the message of gospel-centered teaching, or the community and worship with other children</p>-->
+            {% elif LANGUAGE_CODE == "zh-hans" %}
+            恩道圣经教会儿童事工：
+            <br>
+            <p>每周五19：20～20：30 AWANA</p>
+            <p>每周日10：00～12：30 主日敬拜和主日學</p>
+            {%else%}
+            恩道聖經教會兒童事工
+            <br>
+            <p>每週五19：20～20：30 AWANA</p>
+            <p>每週日10：00～12：30 主日敬拜和主日學</p>
+            {%endif%}
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+</div>
+<br>
+<div class="container">
+      <!--Grid row-->
+<div class="parallax-container" data-parallax="scroll" data-bleed="10" data-speed="0.2"
+  data-image-src="{%static 'img/children_ministry2.jpg'%}"
+  data-natural-width="2880" data-natural-height="1920" style="height: 200px;"></div>
+</div>
+<br>
+
+
+{% endblock %}
+  <<!--h1 class='text-center'>Sunday Mornings</h1>
+      <p>10:30-11:15am Sunday woship for all kids</p>
+
+      <div class="call-outs-container">
+        <div class="container">
+          <div class="row">
+              <div class="call-out">
+                   <div class="text-img-centered" style="font-size: 150%">
+                     <p><strong>Nursery Care (birth – 2)</strong></p>
+                     <p>Our Nursery serves our little ones from birth-2 years at both worship services. Staffed by loving, caring volunteers on Sunday mornings, the nursery is a warm nurturing place where a newborn or toddler can experience God’s love. Nursery care is also provided by paid, trained caregivers for a variety of classes and events that happen mid-week.</p>
+                   </div>
+              </div>
+              <div class="call-out">
+                   <div class="text-img-centered" style="font-size: 150%">
+                     <p><strong>Preschool (3-5)</strong></p>
+                     <p>This class has the needs of the younger child in mind, specifically their desire to move, create, explore, and think. &nbsp;God’s word is shared in developmentally appropriate ways – using games, Bible stories, hands-on activities, and free play to enhance learning and help children understand God’s love for them, and His call for them to love others.</p>
+
+                   </div>
+              </div>
+              <div class="call-out">
+                   <div class="text-img-centered" style="font-size: 150%">
+                     <p><strong>Elementary (K-5th)</strong></p>
+                     <p>Through small group and whole group learning experiences, kids experience learning about God’s Word, and how it applies to their everyday lives.&nbsp; 252 BASICS curriculum and resources ENCOURAGE DISCOVERY, inviting kids to live out their new understanding of how to grow in relationship with God and with others.</p>
+
+                   </div>
+              </div>
+          </div>
+        </div>
+      </div>-->

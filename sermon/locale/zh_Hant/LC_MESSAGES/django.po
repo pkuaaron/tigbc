@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-18 09:21-0500\n"
+"POT-Creation-Date: 2022-02-09 00:45-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,22 +18,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: sermon/templates/sermon.html:2
-msgid "Sunday Sermon Recording"
-msgstr ""
+#: sermon/templates/sermon.html:5
+msgid "主日敬拜录音"
+msgstr "主日敬拜錄音"
 
-#: sermon/templates/sermon.html:6
-msgid "edit"
-msgstr ""
+#: sermon/templates/sermon.html:23
+msgid "没有主日敬拜录音"
+msgstr "沒有主日敬拜錄音"
 
-#: sermon/templates/sermon.html:13
-msgid "No sermons are available."
-msgstr ""
+#: sermon/templates/sermon.html:27
+msgid "主日学录音"
+msgstr "主日學錄音"
 
-#: sermon/templates/sermon.html:28
-msgid "Go"
-msgstr ""
+#: sermon/templates/sermon.html:47
+msgid "没有主日学录音"
+msgstr "沒有主日學錄音"
 
-#: sermon/views.py:37 sermon/views.py:47
+#: sermon/templates/sermon.html:52
+msgid "每日读经计划"
+msgstr "每日讀經計劃"
+
+#: sermon/templates/sermon.html:63 sermon/templates/sermon.html:78
+msgid "没有读经计划"
+msgstr "沒有讀經計劃"
+
+#: sermon/templates/sermon.html:68
+msgid "按照时间顺序"
+msgstr "按照時間順序"
+
+#: sermon/views.py:63
+msgid "主日学"
+msgstr "主日學"
+
+#: sermon/views.py:89 sermon/views.py:98
 msgid "Sermon does not exist"
 msgstr ""

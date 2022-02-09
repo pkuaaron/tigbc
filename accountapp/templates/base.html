@@ -7,11 +7,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/tigbc.css' %}">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
   <script src="https://kit.fontawesome.com/a66831b405.js" crossorigin="anonymous"></script>
   <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
   <script src="{% static 'js/popper.min.js' %}"></script>
   <script src="{% static 'js/bootstrap.min.js' %}"></script>
-</script>
+  <script src="{% static 'js/parallax.min.js' %}"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+  <style>
+      .dropdown:hover .dropdown-menu{
+          display: block;
+      }
+      .dropdown-menu{
+          margin-top: 0;
+      }
+  </style>
+  <script>
+  $(document).ready(function(){
+      $(".dropdown").hover(function(){
+          var dropdownMenu = $(this).children(".dropdown-menu");
+          if(dropdownMenu.is(":visible")){
+              dropdownMenu.parent().toggleClass("open");
+          }
+      });
+  });
+  </script>
     <title>{%trans "恩道圣经教会" %} </title>
 </head>
 
@@ -37,33 +57,46 @@
             </select>
         </form>
       </div>
-      <button class="navbar-toggler navbar-toggler-right text-dark font-weight-bold bg-white rounded" type="button" data-toggle="collapse"
+      <button class="navbar-toggler navbar-toggler-left text-dark font-weight-bold bg-white rounded" type="button" data-toggle="collapse"
        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         菜单
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'accountapp:home' %}#worship">{% trans '主日崇拜' %}</a>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <div class="nav-item dropdown">
+                        <a href="{% url 'accountapp:home' %}" class="nav-link dropdown-toggle" data-toggle="dropdown">{% trans '首页' %}</a>
+                        <div class="dropdown-menu">
+                          <a class="nav-link" href="{% url 'accountapp:home' %}#about">{% trans '关于恩道' %}</a>
+                          <a class="nav-link" href="{% url 'accountapp:home' %}#worship">{% trans '主日崇拜' %}</a>
+                          <a class="nav-link" href="{% url 'accountapp:home' %}#contact">{% trans '联系我们' %}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'accountapp:home' %}#about">{% trans '关于恩道' %}</a>
+            <a class="nav-link" href="{% url 'sermonapp:index'%}">{% trans '录音和读经' %}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'accountapp:home' %}#contact">{% trans '联系我们' %}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'accountapp:faith' %}">{% trans '恩道事工' %}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'accountapp:calendar' %}">{% trans '恩道日历' %}</a>
+              <div class="nav-item dropdown">
+                  <a href="{% url 'accountapp:home' %}" class="nav-link dropdown-toggle" data-toggle="dropdown">{% trans '恩道事工' %}</a>
+                <div class="dropdown-menu">
+                  <a class="nav-link" href="{% url 'accountapp:ministry' %}#fridayfellowship">{% trans '周五团契' %}</a>
+                  <a class="nav-link" href="{% url 'accountapp:ministry' %}#brothers">{% trans '弟兄会' %}</a>
+                  <a class="nav-link" href="{% url 'accountapp:ministry' %}#sisters">{% trans '姐妹会' %}</a>
+                  <a class="nav-link" href="{% url 'accountapp:ministry' %}#evergreen">{% trans '老年事工' %}</a>
+                  <a class="nav-link" href="{% url 'accountapp:ministry' %}#youth">{% trans '青少年事工' %}</a>
+                  <a class="nav-link" href="{% url 'accountapp:ministry' %}#children">{% trans '儿童事工' %}</a>
+                </div>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'accountapp:faith' %}">{% trans '信仰宣言' %}</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'sermonapp:index'%}">{% trans '恩道资源' %}</a>
-          </li>
+
         </ul>
       </div>
     </div>

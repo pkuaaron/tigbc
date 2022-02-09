@@ -24,7 +24,7 @@ SECRET_KEY = '%a*g#yk*sz6to%+9p=@!vi444ei3y6d@w)_^_4n8#a8z*ta@sy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['heroku.com', '127.0.0.1', 'tigbc.heroku.com', 'tigbc.herokuapp.com']
 
 
 # Application definition
@@ -43,21 +43,22 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'tigbc.disable_cookie_lang.ForceDefaultLanguageMiddleware',
+    # 'tigbc.disable_cookie_lang.ForceDefaultLanguageMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'pkuaaron@gmail.com'
-EMAIL_HOST_PASSWORD = '59Kgbmtx_1'
+EMAIL_HOST_USER = 'tigbc.website@gmail.com'
+EMAIL_HOST_PASSWORD = 'John1:14'
 
 LANGUAGES = (
     ('en', 'English'),
@@ -65,8 +66,6 @@ LANGUAGES = (
     ('zh-hant', _('Traditiaonal Chinese')),
 )
 ROOT_URLCONF = 'tigbc.urls'
-MEDIA_ROOT = BASE_DIR
-MEDIA_URL = '/'
 
 TEMPLATES = [
     {
@@ -79,6 +78,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -132,8 +132,15 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+MEDIA_URL='/media/'
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, 'static', 'js'),
+    os.path.join(BASE_DIR, 'static', 'css'),
+    os.path.join(BASE_DIR, 'static', 'img'),
+    os.path.join(BASE_DIR, 'static', 'worship'),
 ]

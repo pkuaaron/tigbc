@@ -1,4 +1,7 @@
 **/.idea
 *.pyc
 **/__pycache__
-**/startbootstrap
+**/staticfiles
+**/venv
+**/tigbc/settings.py
+**/media

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-18 09:19-0500\n"
+"POT-Creation-Date: 2022-02-09 00:45-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,38 +17,73 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: accountapp/templates/base.html:15 accountapp/templates/base.html:23
-#: accountapp/templates/base.html:81
+#: accountapp/templates/base.html:35 accountapp/templates/base.html:43
+#: accountapp/templates/base.html:114
 msgid "恩道圣经教会"
 msgstr "Grace in Truth Bible Church"
 
-#: accountapp/templates/base.html:47 accountapp/templates/home.html:44
-msgid "主日崇拜"
-msgstr "Worship"
+#: accountapp/templates/base.html:70
+msgid "首页"
+msgstr "Home"
 
-#: accountapp/templates/base.html:50 accountapp/templates/home.html:57
+#: accountapp/templates/base.html:72 accountapp/templates/home.html:42
 msgid "关于恩道"
 msgstr "About"
 
-#: accountapp/templates/base.html:53
+#: accountapp/templates/base.html:73 accountapp/templates/home.html:59
+msgid "主日崇拜"
+msgstr "Worship"
+
+#: accountapp/templates/base.html:74
 msgid "联系我们"
 msgstr "Contact"
 
-#: accountapp/templates/base.html:56
+#: accountapp/templates/base.html:81
+msgid "录音和读经"
+msgstr "Recording and Bible Reading"
+
+#: accountapp/templates/base.html:85
 msgid "恩道事工"
 msgstr "Ministry"
 
-#: accountapp/templates/base.html:59
+#: accountapp/templates/base.html:87
+#: accountapp/templates/children_ministry.html:10
+#: accountapp/templates/home.html:67
+msgid "周五团契"
+msgstr "Friday Fellowship"
+
+#: accountapp/templates/base.html:88
+#: accountapp/templates/children_ministry.html:32
+msgid "弟兄会"
+msgstr "Brothers Ministry"
+
+#: accountapp/templates/base.html:89
+#: accountapp/templates/children_ministry.html:54
+msgid "姐妹会"
+msgstr "Sisters Ministry"
+
+#: accountapp/templates/base.html:90
+#: accountapp/templates/children_ministry.html:75
+msgid "老年事工"
+msgstr "Evergreen Ministry"
+
+#: accountapp/templates/base.html:91
+#: accountapp/templates/children_ministry.html:99
+msgid "青少年事工"
+msgstr "Youth Ministry"
+
+#: accountapp/templates/base.html:92
+#: accountapp/templates/children_ministry.html:128
+msgid "儿童事工"
+msgstr "Children Ministry"
+
+#: accountapp/templates/base.html:97
+msgid "信仰宣言"
+msgstr "Faith Declarations"
+
+#: accountapp/templates/calendar.html:8
 msgid "恩道日历"
 msgstr "Calendar"
-
-#: accountapp/templates/base.html:62
-msgid "信仰宣言"
-msgstr "Faith"
-
-#: accountapp/templates/base.html:65
-msgid "恩道资源"
-msgstr "Resource"
 
 #: accountapp/templates/contact_me.html:8
 msgid "姓名"
@@ -86,18 +121,21 @@ msgstr "Send"
 msgid "信息已经发送！"
 msgstr "Message has been sent"
 
-#: accountapp/templates/home.html:40
+#: accountapp/templates/home.html:55
 msgid "主日祷告"
 msgstr "Sunday Prayer"
 
-#: accountapp/templates/home.html:48
+#: accountapp/templates/home.html:63
 msgid "主日学校"
 msgstr "Sunday School"
 
-#: accountapp/templates/home.html:76
+#: accountapp/templates/home.html:85
 msgid "王宇晖传道"
 msgstr "Pastor Kevin Wang"
 
-#: accountapp/templates/home.html:119
+#: accountapp/templates/home.html:128
 msgid "联系我"
 msgstr "Contact Me"
+
+#~ msgid "恩道资源"
+#~ msgstr "Resource"

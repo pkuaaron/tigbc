@@ -2,37 +2,86 @@
 {% load i18n %}
 {% block content %}
 <div class="container">
-<h2>{% trans '主日敬拜录音' %}</h2>
+<h2 class='text-center'>{% trans '主日敬拜录音' %}</h2>
   {% if sermon_list %}
-      <ul>
+      <div class="container">
       {% for sermon,sermon_title in sermon_list %}
-          <li><a href="{% url 'sermonapp:details' sermon.id %}">{{ sermon_title }}</a>
-            <!-- <a href="{%url 'sermonapp:editor' sermon.id %}">{% trans 'edit' %}</a> -->
-          <audio controls>
-          <source src="/static/worship/{{ sermon.mp3 }}" type="audio/mpeg">
-          </audio>
-        </li>
+          <div class="row d-flex flex-column">
+            <!-- <a href="{% url 'sermonapp:details' sermon.id %}"> -->
+            <div class="col-md-12">
+            {{ sermon_title }}&emsp;<label style="color:white;">{{sermon.id}}</label>
+            </div>
+            <div class="col-md-12">
+              <audio class="embed-responsive-item" controls="" preload="none"  style='width:600px'>
+                <source src="{{ MEDIA_URL }}{{ sermon.mp3 }}" type="audio/mp3">
+              </audio>
+          </div>
+        </div>
       {% endfor %}
-      </ul>
+      </div>
   {% else %}
       <p>{% trans '没有主日敬拜录音' %}</p>
   {% endif %}
 </div>
 <div class="container">
-<h2>{% trans '主日学录音' %}</h2>
+<h2 class='text-center'>{% trans '主日学录音' %}</h2>
   {% if sundayschool_list %}
-      <ul>
-      {% for sermon,sermon_title in sundayschool_list %}
-          <li><a href="{% url 'sermonapp:details' sermon.id %}">{{ sermon_title }}</a>
-            <!-- <a href="{%url 'sermonapp:editor' sermon.id %}">{% trans 'edit' %}</a> -->
-          <audio controls >
-            <source src="/static/worship/{{ sermon.mp3 }}" type="audio/mpeg">
-          </audio>
-        </li>
+      <div class='container'>
+      {% for sermon, sermon_title in sundayschool_list %}
+
+        <div class="row">
+          <!-- <a href="{% url 'sermonapp:details' sermon.id %}"> -->
+          <div class="col-md-12">
+          {{ sermon_title }}&emsp;<label style="color:white;">{{sermon.id}}</label>
+
+          </div>
+          <div class="col-md-12">
+            <audio class="embed-responsive-item" controls="" preload="none" style='width:600px'>
+              <source src="{{ MEDIA_URL }}{{ sermon.mp3 }}" type="audio/mp3">
+            </audio>
+        </div>
+      </div>
       {% endfor %}
-      </ul>
+      </div>
   {% else %}
       <p>{% trans '没有主日学录音' %}</p>
   {% endif %}
 </div>
+
+
+<h2 class='text-center'>{% trans '每日读经计划' %}</h2>
+<div class="container">
+  {% if biblereading_plan %}
+      <table class='display' id='plan_table'>
+      {% for html in biblereading_plan %}
+            {% autoescape off %}
+                {{ html }}
+            {% endautoescape %}
+      {% endfor %}
+      </table>
+  {% else %}
+      <p>{% trans '没有读经计划' %}</p>
+  {% endif %}
+</div>
+
+<!--<div class="container">-->
+<!--<h3>{% trans '按照时间顺序' %}</h3>-->
+<!--  {% if biblereading_plan2 %}-->
+<!--      <table class='display' id='plan_table1'>-->
+<!--      {% for html in biblereading_plan2 %}-->
+<!--            {% autoescape off %}-->
+<!--                {{ html }}-->
+<!--            {% endautoescape %}-->
+<!--      {% endfor %}-->
+<!--      </table>-->
+<!--  {% else %}-->
+<!--      <p>{% trans '没有读经计划' %}</p>-->
+<!--  {% endif %}-->
+<!--</div>-->
+<script>
+$(document).ready( function () {
+$('#plan_table').DataTable();
+$('#plan_table1').DataTable();
+  } );
+</script>
 {% endblock %}

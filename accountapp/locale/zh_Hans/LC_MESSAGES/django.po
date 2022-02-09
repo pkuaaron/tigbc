@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-16 22:35-0500\n"
+"POT-Creation-Date: 2022-02-09 00:45-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,67 +18,122 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: accountapp/templates/base.html:15 accountapp/templates/base.html:27
-#: accountapp/templates/base.html:63
+#: accountapp/templates/base.html:35 accountapp/templates/base.html:43
+#: accountapp/templates/base.html:114
 msgid "恩道圣经教会"
 msgstr ""
 
-#: accountapp/templates/base.html:35
-msgid "主日崇拜"
+#: accountapp/templates/base.html:70
+msgid "首页"
 msgstr ""
 
-#: accountapp/templates/base.html:38 accountapp/templates/home.html:57
+#: accountapp/templates/base.html:72 accountapp/templates/home.html:42
 msgid "关于恩道"
 msgstr ""
 
-#: accountapp/templates/base.html:41
+#: accountapp/templates/base.html:73 accountapp/templates/home.html:59
+msgid "主日崇拜"
+msgstr ""
+
+#: accountapp/templates/base.html:74
 msgid "联系我们"
 msgstr ""
 
-#: accountapp/templates/base.html:44
+#: accountapp/templates/base.html:81
+msgid "录音和读经"
+msgstr ""
+
+#: accountapp/templates/base.html:85
+msgid "恩道事工"
+msgstr ""
+
+#: accountapp/templates/base.html:87
+#: accountapp/templates/children_ministry.html:10
+#: accountapp/templates/home.html:67
+msgid "周五团契"
+msgstr ""
+
+#: accountapp/templates/base.html:88
+#: accountapp/templates/children_ministry.html:32
+msgid "弟兄会"
+msgstr ""
+
+#: accountapp/templates/base.html:89
+#: accountapp/templates/children_ministry.html:54
+msgid "姐妹会"
+msgstr ""
+
+#: accountapp/templates/base.html:90
+#: accountapp/templates/children_ministry.html:75
+msgid "老年事工"
+msgstr ""
+
+#: accountapp/templates/base.html:91
+#: accountapp/templates/children_ministry.html:99
+msgid "青少年事工"
+msgstr ""
+
+#: accountapp/templates/base.html:92
+#: accountapp/templates/children_ministry.html:128
+msgid "儿童事工"
+msgstr ""
+
+#: accountapp/templates/base.html:97
 msgid "信仰宣言"
 msgstr ""
 
-#: accountapp/templates/base.html:47
-msgid "恩道资源"
+#: accountapp/templates/calendar.html:8
+msgid "恩道日历"
 msgstr ""
 
-#: accountapp/templates/contact_me.html:7
+#: accountapp/templates/contact_me.html:8
 msgid "姓名"
 msgstr ""
 
-#: accountapp/templates/contact_me.html:14
+#: accountapp/templates/contact_me.html:8
+msgid "请输入您的姓名！"
+msgstr ""
+
+#: accountapp/templates/contact_me.html:15
 msgid "电子邮箱"
 msgstr ""
 
-#: accountapp/templates/contact_me.html:21
+#: accountapp/templates/contact_me.html:15
+msgid "请输入您的电子邮箱！"
+msgstr ""
+
+#: accountapp/templates/contact_me.html:22
 msgid "电话号码"
 msgstr ""
 
-#: accountapp/templates/contact_me.html:28
+#: accountapp/templates/contact_me.html:22
+msgid "请输入您的电话号码！"
+msgstr ""
+
+#: accountapp/templates/contact_me.html:29
 msgid "信息"
 msgstr ""
 
-#: accountapp/templates/contact_me.html:36
+#: accountapp/templates/contact_me.html:37
 msgid "发送"
 msgstr ""
 
-#: accountapp/templates/home.html:40
-msgid "主日祷告<br>09:15am"
+#: accountapp/templates/contact_me.html:57
+msgid "信息已经发送！"
 msgstr ""
 
-#: accountapp/templates/home.html:44
-msgid "主日崇拜<br>10:00am"
+#: accountapp/templates/home.html:55
+msgid "主日祷告"
 msgstr ""
 
-#: accountapp/templates/home.html:48
-msgid "主日学校<br>11:30am"
+#: accountapp/templates/home.html:63
+msgid "主日学校"
 msgstr ""
 
-#: accountapp/templates/home.html:76
+#: accountapp/templates/home.html:85
 msgid "王宇晖传道"
 msgstr ""
 
-#: accountapp/templates/home.html:119
+#: accountapp/templates/home.html:128
 msgid "联系我"
 msgstr ""
