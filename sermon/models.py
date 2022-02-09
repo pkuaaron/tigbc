@@ -1,13 +1,15 @@
 from django.db import models
 import datetime
 
+from django.conf import settings
+
 
 class SermonSundaySchool(models.Model):
     file_type = models.CharField(max_length=50, choices=[('Sermon', 'Sermon'), ('Sunday School', 'Sunday School')], default='Sermon')
     english_title = models.CharField(max_length=200, default='', null=True, blank=True)
     simplified_chinese_title = models.CharField(max_length=200, default='', null=True, blank=True)
     tradition_chinese_title = models.CharField(max_length=200, default='', null=True, blank=True)
-    mp3 = models.FileField(upload_to='static/worship/')
+    mp3 = models.FileField(upload_to=f'media/')
     bible_verses = models.CharField(max_length=200, default='', null=True, blank=True)
     simplified_bible_verses = models.CharField(max_length=200, default='', null=True, blank=True)
     tradition_bible_verses = models.CharField(max_length=200, default='', null=True, blank=True)

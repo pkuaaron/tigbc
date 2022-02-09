@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load i18n %}
 {% block content %}
+{% load static %}
 <div class="container">
 <h2 class='text-center'>{% trans '主日敬拜录音' %}</h2>
   {% if sermon_list %}
@@ -13,7 +14,7 @@
             </div>
             <div class="col-md-12">
               <audio class="embed-responsive-item" controls="" preload="none"  style='width:600px'>
-                <source src="{{ MEDIA_URL }}{{ sermon.mp3 }}" type="audio/mp3">
+                <source src="{{ sermon.mp3.url }}" type="audio/mp3">
               </audio>
           </div>
         </div>
@@ -37,7 +38,7 @@
           </div>
           <div class="col-md-12">
             <audio class="embed-responsive-item" controls="" preload="none" style='width:600px'>
-              <source src="{{ MEDIA_URL }}{{ sermon.mp3 }}" type="audio/mp3">
+                <source src="{{ sermon.mp3.url }}" type="audio/mp3">
             </audio>
         </div>
       </div>

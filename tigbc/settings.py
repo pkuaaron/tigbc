@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sermon.apps.UploadConfig',
+    # 'upload',
+    'storages',
     'accountapp'
 ]
 
@@ -128,14 +130,45 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+USE_S3 = True #os.getenv('USE_S3') == 'TRUE'
 
+if USE_S3:
+    # aws settings
+    AWS_ACCESS_KEY_ID = 'AKIA3J73XHJ4E2ABLUXB'
+    AWS_SECRET_ACCESS_KEY = 'li9I+v0b93/fTViO3BBwg9iJi2JBmpjbTid6RTYi'
+    AWS_STORAGE_BUCKET_NAME = 'tigbc.media'
+    AWS_DEFAULT_ACL = 'public-read'
+    AWS_S3_REGION_NAME = 'us-east-1'  # e.g. us-east-2
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+    AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
+    # s3 static settings
+    AWS_LOCATION = 'static'
+    AWS_PRELOAD_METADATA = True
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{AWS_LOCATION}/'
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
+
+    COLLECTFAST_STRATEGY = 'collectfast.strategies.boto3.Boto3Strategy'
+    COLLECTFAST_THREADS = 20
+    MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+    MEDIA_URL= f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
+
+    S3DIRECT_DESTINATIONS = {
+        'primary_destination': {
+            'key': 'media/static/worship',
+            'allowed': ['image/jpg', 'image/jpeg', 'image/png', 'audio/mp3'],
+        },
+    }
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+    STATIC_URL = '/static/'
+    MEDIA_URL='/media/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
-MEDIA_ROOT=os.path.join(BASE_DIR,'media')
-MEDIA_URL='/media/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
