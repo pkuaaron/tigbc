@@ -9,7 +9,7 @@ from django.utils import translation
 from django.utils.translation import gettext as _
 from dateutil import relativedelta
 import datetime
-import pandas as pd
+# import pandas as pd
 # Create your views here.
 
 
