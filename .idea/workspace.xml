@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00855c93-ab0c-4e85-bd52-4fae6a1f3bf0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sermon/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sermon/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sermon/templates/sermon.html" beforeDir="false" afterPath="$PROJECT_DIR$/sermon/templates/sermon.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tigbc/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tigbc/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tigbc/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tigbc/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +184,7 @@
       <updated>1571628381538</updated>
       <workItem from="1571628383268" duration="273000" />
       <workItem from="1572404149650" duration="80000" />
-      <workItem from="1644420803419" duration="13615000" />
+      <workItem from="1644420803419" duration="14268000" />
     </task>
     <servers />
   </component>

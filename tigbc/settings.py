@@ -136,7 +136,7 @@ if USE_S3:
     # aws settings
     AWS_ACCESS_KEY_ID = 'AKIA3J73XHJ4E2ABLUXB'
     AWS_SECRET_ACCESS_KEY = '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'
-    AWS_STORAGE_BUCKET_NAME = 'tigbc.media'
+    AWS_STORAGE_BUCKET_NAME = 'tigbcmedia'
     AWS_DEFAULT_ACL = 'public-read'
     AWS_S3_REGION_NAME = 'us-east-1'  # e.g. us-east-2
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
