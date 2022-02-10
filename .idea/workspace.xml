@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00855c93-ab0c-4e85-bd52-4fae6a1f3bf0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountapp/templates/children_ministry.html" beforeDir="false" afterPath="$PROJECT_DIR$/accountapp/templates/children_ministry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountapp/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/accountapp/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tigbc/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tigbc/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -184,7 +187,7 @@
       <updated>1571628381538</updated>
       <workItem from="1571628383268" duration="273000" />
       <workItem from="1572404149650" duration="80000" />
-      <workItem from="1644420803419" duration="14268000" />
+      <workItem from="1644420803419" duration="15643000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load i18n %}
+{% load static%}
 
 {% block content %}
     <!-- picture slides -->
@@ -16,18 +17,18 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" >
           <div class="carousel-item active">
-            <img src="/static/img/worship1.png" alt="worship" class="d-block img-fluid">
+            <img src="{% static 'img/worship1.png' %}" alt="worship" class="d-block img-fluid">
           </div>
 
           <div class="carousel-item">
-            <img src="/static/img/worship2.png" alt="worship" class="d-block img-fluid">
+            <img src="{% static 'img/worship2.png' %}" alt="worship" class="d-block img-fluid">
           </div>
 
           <div class="carousel-item">
-            <img src="/static/img/w03.jpg" alt="worship" class="d-block img-fluid">
+            <img src="{% static 'img/w03.jpg' %}" alt="worship" class="d-block img-fluid">
           </div>
           <div class="carousel-item">
-            <img src="/static/img/w12.jpg" alt="worship" class="d-block img-fluid">
+            <img src="{% static 'img/w12.jpg' %}" alt="worship" class="d-block img-fluid">
           </div>
         </div>
 
@@ -55,15 +56,15 @@
 <!--                 <div class="text-img-centered text-light bg-dark text-center" style="font-size: 150%">{%trans "主日祷告" %}<br>09:00-9:15am</div>-->
 <!--            </div>-->
             <div class="call-out">
-                 <img  src="/static/img/worship.jpg" width="100%" height="73%">
+                 <img  src="{% static 'img/worship.jpg' %}" width="100%" height="73%">
                  <div class="text-img-centered text-light bg-dark text-center" style="font-size: 150%">{%trans "主日崇拜" %}<br>10:00-11:15am</div>
             </div>
             <div class="call-out">
-                 <img src="/static/img/bible_study.png"  width="100%">
+                 <img src="{% static 'img/bible_study.png' %}"  width="100%">
                  <div class="text-img-centered text-light bg-dark text-center" style="font-size: 150%">{%trans "主日学校" %}<br>11:30am-12:30pm</div>
             </div>
             <div class="call-out">
-                 <img src="/static/img/fellowship.png"  width="100%" height="73%">
+                 <img src="{% static 'img/fellowship.png' %}"  width="100%" height="73%">
                  <div class="text-img-centered text-light bg-dark text-center" style="font-size: 150%">{%trans "周五团契" %}<br>07:30-09:00pm</div>
             </div>
         </div>
@@ -117,7 +118,7 @@
            </div>
             <div class="call-out2">
                 <a href="https://www.google.com/maps/place/9829+Providence+Rd+W,+Charlotte,+NC+28277/@35.0379346,-80.8311338,17z/data=!3m1!4b1!4m5!3m4!1s0x885682b429075745:0xfc0a044182e1ce56!8m2!3d35.0379302!4d-80.8289451?hl=en" target="top" style="TEXT-DECORATION: NONE; color:white">
-  	            <img width="100%" src="/static/img/map3.png"> </a>
+  	            <img width="100%" src="{% static 'img/map3.png' %}"> </a>
             </div>
 
         </div>
