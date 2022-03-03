@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<div class="container">
+{%if LANGUAGE_CODE == "en" %}
+  <div>Dear Brothers，Sisters and Friends<br>
+   </div>
+   <div>
+     Praise the LORD  for all His blessings and guidance，we resumed in-person worship (with Zoom on-line option). You are very welcome to
+       come to the Church to worship our LORD in-person with us. In-person worship is also available for elementary, middle and high school kids.
+   </div>
+   <div><br></div><div><b>Sunday Worship and Sunday School：</b></div>
+   <div>Sunday Worship：10AM (in-person and Zoom)</div>
+   <div>Sunday School：11：30AM (in-person and Zoom)</div>
+
+<div>Youth Sunday School： 11：30AM (in-person only)<br></div>
+  <div><br></div><div><b>Offering：</b><br></div><div>recipient “TIGBC”，Mailing address：</div>
+  <div>Truth in Grace Bible Church<br></div><div>P. O. Box 78764</div><div>Charlotte, NC 28271</div>
+  <div><br></div><div>Zelle ：<a href="https://www.zellepay.com/" target="_blank">https://www.zellepay.com/</a></div>
+  <div>No registeration or fee required</div><div>Recipient type：“Business"，Recipient Name：“TIGBC"，<wbr>E-Mail：“<a href="mailto:TIGBC1@gmail.com" target="_blank">TIGBC1@gmail.com</a>”</div>
+    <div>Please provide your name in the notes or the type of offering (tithe, love or missionary) </div>
+<div>If there is any change, we will notify you by email</div>
+
+{% elif LANGUAGE_CODE == "zh-hans" %}
+  <div dir="ltr">恩道圣经教会的弟兄姐妹和朋友们，<br>
+   </div>
+   <div>
+     感谢神的看护和引领，教会已经恢复现场敬拜和主日学（同时提供线上直播）欢迎大家回到教会和我们一起敬拜我们的 神！现场敬拜同时将分别有初中班，小学班和幼儿
+班的教导和看护，崇拜后有高中班主日学。週五查经;同时也增加银行转账的奉献方式。
+   </div>
+   <div><br></div><div><b>中文主日崇拜，主日学：</b></div>
+   <div>主日崇拜：上午10：00(线上和现场同时进行，鼓励大家到现场一起来敬拜我们的 神！)</div>
+   <div>主日学：上午11：30(线上和现场同时进行，鼓励大家到现场！)</div>
+
+<div>青少年主日学(现场)：上午11：30-12：15。<br></div>
+  <div><br></div><div><b>教会奉献：</b><br></div><div>支票抬头请写“TIGBC”，邮寄至（请勿寄现金）：</div>
+  <div>Truth in Grace Bible Church<br></div><div>P. O. Box 78764</div><div>Charlotte, NC 28271</div>
+  <div><br></div><div>银行转账：<a href="https://www.zellepay.com/" target="_blank">https://www.zellepay.com/</a></div>
+  <div>需要注册，无手续费转账</div><div>收取者：请选“Business"，名字：“TIGBC"，<wbr>电邮：“<a href="mailto:TIGBC1@gmail.com" target="_blank">TIGBC1@gmail.com</a>”</div>
+    <div>请备注您的姓名，地址及奉献项目（普通基金，宣教基金，<wbr>爱心基金）。</div>
+<div><br></div><div>若有其他变化，请注意教会电邮和网站上的通知，以电邮为准。</div>
+<div><br></div>
+<div>若您有特别需要教会帮助，请电邮或电话告诉我们，<wbr>我们会尽力而爲。</div>
+
+{%else%}
+   <div dir="ltr">恩道聖經教會的弟兄姐妹和朋友們，<br>
+   </div>
+   <div>
+     感謝神的看護和引領，教會已經恢復現場敬拜和主日學（同時提供線上直播）歡迎大家回到教會和我們一起敬拜我們的 神！現場敬拜同時將分別有初中班，小學班和幼兒
+班的教導和看護，崇拜后有高中班主日學。週五查經;同時也增加銀行轉賬的奉獻方式。
+   </div>
+   <div><br></div><div><b>中文主日崇拜，主日學：</b></div>
+   <div>主日崇拜：上午10：00(線上和現場同時進行，鼓勵大家到現場一起來敬拜我們的 神！)</div>
+   <div>主日學：上午11：30(線上和現場同時進行，鼓勵大家到現場！)</div>
+
+<div>青少年主日學(現場)：上午11：30-12：15。<br></div>
+  <div><br></div><div><b>教會奉獻：</b><br></div><div>支票擡頭請寫“TIGBC”，郵寄至（請勿寄現金）：</div>
+  <div>Truth in Grace Bible Church<br></div><div>P. O. Box 78764</div><div>Charlotte, NC 28271</div>
+  <div><br></div><div>銀行轉賬：<a href="https://www.zellepay.com/" target="_blank">https://www.zellepay.com/</a></div>
+  <div>需要注冊，無手續費轉賬</div><div>收取者：請選“Business"，名字：“TIGBC"，<wbr>電郵：“<a href="mailto:TIGBC1@gmail.com" target="_blank">TIGBC1@gmail.com</a>”</div>
+    <div>請備注您的姓名，地址及奉獻項目（普通基金，宣教基金，<wbr>愛心基金）。</div>
+<div><br></div><div>若有其他變化，請注意教會電郵和網站上的通知，以電郵為准。</div>
+<div><br></div>
+<div>若您有特別需要教會幫助，請電郵或電話告訴我們，<wbr>我們會盡力而爲。</div>
+{% endif %}
+</div>
+{% endblock %}
